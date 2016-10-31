@@ -1,0 +1,24 @@
+#slider_container{style: 'height: 600px'}
+  %div.loading{u: 'loading'}
+    %div.loading-setting
+    %div.loading-image
+
+  %div#slides{style: 'height: 500px', u: 'slides'}
+    - @images.each do |image|
+      - if image.asset
+        %div
+          %a{href: 'javascript:void(0)'}
+            %img{src: image.asset.url, :u => "image"}/
+          %img{src: image.asset.url, :u => "thumb"}/
+
+  .jssort{autocenter: '1', u: 'thumbnavigator'}
+    / Thumbnail Item Skin Begin
+    %div{u: 'slides', style: 'cursor: default'}
+      .p{u: 'prototype'}
+        .w
+          .t{u: 'thumbnailtemplate'}
+        .c
+    / Thumbnail Item Skin End
+
+  %span.arrowl{:u => "arrowleft"}
+  %span.arrowr{:u => "arrowright"}

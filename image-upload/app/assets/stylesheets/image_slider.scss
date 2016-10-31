@@ -1,0 +1,157 @@
+#slider_container {
+  position: relative;
+  margin: 0px auto;
+  top: 0px;
+  left: 0px;
+  width: 900px;
+  height: 700px;
+  overflow: hidden;
+  visibility: visible;
+  background-color: rgb(36, 38, 46);
+}
+
+.loading {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 900px;
+  height: 500px;
+  z-index: 1000;
+  display: none;
+}
+
+.loading-setting {
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.loading-image {
+  position: absolute;
+  display: block;
+  background: url(/assets/loading.gif) no-repeat center center;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#slides {
+  width: 900px;
+  height: 700px;
+  visibility: visible;
+  display: block;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: visible;
+}
+
+.arrowl, .arrowr {
+  display: block;
+  position: absolute;
+  /* size of arrow element */
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: url('/assets/a17.png') no-repeat;
+  overflow: hidden;
+}
+
+.arrowl {
+  background-position: -10px -40px;
+  top: 230px;
+  left: 8px;
+}
+
+.arrowr {
+  background-position: -70px -40px;
+  top: 230px;
+  right: 8px;
+}
+.arrowl:hover { background-position: -130px -40px; }
+.arrowr:hover { background-position: -190px -40px; }
+
+.jssort {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 800px;
+  height: 100px;
+  visibility: visible;
+}
+
+.jssort .p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 72px;
+  height: 72px;
+}
+
+.jssort .t {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  border: none;
+}
+
+.jssort .w {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.jssort .c {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 68px;
+  height: 68px;
+  border: #000 2px solid;
+  box-sizing: content-box;
+  background: url('/assets/t01.png') -800px -800px no-repeat;
+  _background: none;
+}
+.jssort .pav .c {
+  top: 2px;
+  _top: 0px; 
+  left: 2px;
+  _left: 0px;
+  width: 68px;
+  height: 68px;
+  border: #000 0px solid;
+  _border: #fff 2px solid;
+  background-position: 50% 50%;
+}
+
+.jssort .p:hover .c {
+  top: 0px;
+  left: 0px;
+  width: 70px;
+  height: 70px;
+  border: #fff 1px solid;
+  background-position: 50% 50%;
+}
+
+.jssort .p.pdn .c {
+  background-position: 50% 50%;
+  width: 68px;
+  height: 68px;
+  border: #000 2px solid;
+}
+
+* html .jssort .c, * html .jssort .pdn .c, * html .jssort .pav .c {
+  /* ie quirks mode adjust */    
+  width: 72px;
+  height: 72px;
+}
